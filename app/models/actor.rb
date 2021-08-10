@@ -2,13 +2,13 @@ class Actor < ApplicationRecord
   # Direct associations
 
   has_many   :characters,
-             :dependent => :nullify
+             dependent: :nullify
 
   # Indirect associations
 
   has_many   :filmography,
-             :through => :characters,
-             :source => :movie
+             through: :characters,
+             source: :movie
 
   # Validations
 
@@ -17,5 +17,4 @@ class Actor < ApplicationRecord
   def to_s
     name
   end
-
 end
